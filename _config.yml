@@ -1,0 +1,44 @@
+# Site settings
+title: Zweien's Notes
+email: 278954153@qq.com
+description: > # this means to ignore newlines until "baseurl:"
+  Zweien's Notes
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: http://zweien.github.io # the base hostname & protocol for your site
+rss_url: /pages/feed.xml
+author: Zweien
+
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'category'
+recent_num: 20
+
+# Social account
+github: zweien
+
+
+# avatar and Favicon
+avatar: /assets/img/z.png
+favicon: /assets/img/z.png
+
+# disqus config
+disqus:
+  shortname: zweien
+
+
+
+# Build settings
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+highlighter: rouge
+mathjax: true
+sass:
+  style: compressed
+
+# Jekyll Plugin
+# https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
