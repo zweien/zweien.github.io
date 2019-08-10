@@ -91,7 +91,11 @@ $(function() {
       if($(window).width() <= 1024) {
         menu.add(sidebar).add(main).removeClass('open');
       }
+      $.getScript('//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML',function () {
+            MathJax.Hub.Typeset();
+        });
     }
+
   });
 
   // Tags Filter
