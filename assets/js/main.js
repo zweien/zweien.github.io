@@ -90,11 +90,27 @@ $(function() {
       // only remove open in small screen
       if($(window).width() <= 1024) {
         menu.add(sidebar).add(main).removeClass('open');
-      }
-      $.getScript('//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML',function () {
-            MathJax.Hub.Typeset();
+      };
+    },
+    'pjax:complete': function () {
+      $.getScript("//https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML", function() {
+          MathJax.Hub.Config({
+            TeX: {
+              equationNumbers: {
+                autoNumber: "AMS"
+              }
+            },
+            tex2jax: {
+            inlineMath: [ ['$', '$'] ],
+            displayMath: [ ['$$', '$$'] ],
+            processEscapes: true,
+          }
         });
-    }
+          // entry-content是文章页的内容div的class
+          var math = document.getElementsByClassName("entry-content")[0];
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub,math]);
+      });
+
 
   });
 
