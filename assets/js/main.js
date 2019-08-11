@@ -84,12 +84,12 @@
         main.removeClass('fadeIn');
       },
       'pjax:end': function () {
-        
+
         $.getScript("https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML", function () {
           MathJax.Hub.Queue(
-            ["resetEquationNumbers",MathJax.InputJax.TeX],
-            ["PreProcess",MathJax.Hub],
-            ["Reprocess",MathJax.Hub]
+            ["resetEquationNumbers", MathJax.InputJax.TeX],
+            ["PreProcess", MathJax.Hub],
+            ["Reprocess", MathJax.Hub]
           );
         });
         // location.reload();
