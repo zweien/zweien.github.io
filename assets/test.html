@@ -12,7 +12,7 @@
         repo: 'zweien.github.io',
         owner: 'zweien',
         admin: ['zweien'],
-        id: decodeURI(location.pathname),
+        id: md5(location.pathname),
         distractionFreeMode: 'true',
         language: 'zh-CN',
         perPage: parseInt('10', 10)
