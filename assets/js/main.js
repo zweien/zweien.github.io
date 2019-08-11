@@ -84,6 +84,15 @@
         main.removeClass('fadeIn');
       },
       'pjax:end': function () {
+        
+        $.getScript("https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML", function () {
+          MathJax.Hub.Queue(
+            ["resetEquationNumbers",MathJax.InputJax.TeX],
+            ["PreProcess",MathJax.Hub],
+            ["Reprocess",MathJax.Hub]
+          );
+        });
+        // location.reload();
         afterPjax();
         NProgress.done();
         main.scrollTop(0).addClass('fadeIn');
@@ -91,44 +100,7 @@
         if ($(window).width() <= 1024) {
           menu.add(sidebar).add(main).removeClass('open');
         };
-        $.getScript("https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML", function () {
-          MathJax.Hub.Config({
-            TeX: {
-              equationNumbers: {
-                autoNumber: "AMS"
-              }
-            },
-            tex2jax: {
-              inlineMath: [['$', '$']],
-              displayMath: [['$$', '$$']],
-              processEscapes: true,
-            }
-          });
-          MathJax.Hub.Typeset();
-          // entry-content是文章页的内容div的class
-          // var math = document.getElementsByClassName("entry-content")[0];
-          // MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
-        });
       },
-      // 'pjax:complete': function () {
-      //   $.getScript("https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML", function () {
-      //     MathJax.Hub.Config({
-      //       TeX: {
-      //         equationNumbers: {
-      //           autoNumber: "AMS"
-      //         }
-      //       },
-      //       tex2jax: {
-      //         inlineMath: [['$', '$']],
-      //         displayMath: [['$$', '$$']],
-      //         processEscapes: true,
-      //       }
-      //     });
-      //     // entry-content是文章页的内容div的class
-      //     var math = document.getElementsByClassName("entry-content")[0];
-      //     MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
-      //   });
-      // },
     });
 
     // Tags Filter
