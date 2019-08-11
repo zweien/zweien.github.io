@@ -31,7 +31,6 @@ favicon: /assets/img/z.png
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
 highlighter: rouge
-kramdown: GMF
 mathjax: enabled
 sass:
   style: compressed
