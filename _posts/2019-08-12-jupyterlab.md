@@ -24,11 +24,15 @@ Jupyter Lab 1.0 近日已发布，作为 Jupyter Notebook 的接班人，在功�
 ```
 conda install -c conda-forge jupyterlab
 ```
+- 升级到最新版 `conda update jupyterlab`
+
 或者
 - pip
 ```
 pip install jupyterlab
 ```
+
+可以使用 `conda list jupyterlab` 查看版本，确保版本 > 1.0
 
 ## 使用
 
@@ -43,7 +47,11 @@ pip install jupyterlab
 
 目前 Jupyter lab 已有许多插件支持，并再逐步丰富。[awesome-jupyterlab](https://github.com/mauhai/awesome-jupyterlab) 总结了常用的一些，每个插件项目都有详细的安装配置教程。
 
-其实在最新版本中，jupyter lab 自带了一个插件管理器，默认是关闭状态，开启后只需在管理中便可方便的安装、升级、删除插件。开启方法为：在侧边栏打开 `commands` (调色盘标志)，搜索框中输入`extension manager`，将它勾选，然后侧边栏最后将出现插件管理器。
+其实在最新版本中，jupyter lab 自带了一个插件管理器，默认是关闭状态，开启后只需在管理中便可方便的安装、升级、删除插件。
+
+开启方法为：在侧边栏打开 `commands` (调色盘标志)，搜索框中输入`extension manager`，将它勾选，然后侧边栏最后将出现插件管理器。
+
+目前`extension manager`还处于试验阶段，如果插件安装失败，可按照插件安装说明的命令行模式安装。
 
 下面介绍几个实用插件：
 
@@ -52,5 +60,5 @@ pip install jupyterlab
 ![](https://raw.githubusercontent.com/krassowski/jupyterlab-go-to-definition/master/examples/demo.gif)
 
 - [Code Formatter](https://github.com/ryantam626/jupyterlab_code_formatter)，规范代码
-- [jupyterlab-variableInspector](https://github.com/lckr/jupyterlab-variableInspector)，变量监控，支持 numpy、pandas、tensorflow，目前还不支持 pytorch，实用方法见下图
+- [jupyterlab-variableInspector](https://github.com/lckr/jupyterlab-variableInspector)，变量监控，支持 numpy、pandas、tensorflow，目前暂不支持高维数据的表格式查看，使用方法见以下动图
 ![](https://github.com/lckr/jupyterlab-variableInspector/raw/master/early_demo.gif)
