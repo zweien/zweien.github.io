@@ -39,7 +39,7 @@ pip install jupyterlab
 安装或升级成功后，与 notebook 使用方法类似，在命令行输入 `jupyter lab` 启动。
 
 - 与 notebook 不同，lab将侧边栏利用了起来，这样切换文件等操作在同一窗口就可完成，使其向IDE又近了一步。
-- lab基本的操作与快捷键与notebook保持一致，在cell中输入代码，shift enter运行。
+- lab基本的操作与快捷键与notebook保持一致，在cell中输入代码，`shift`+`enter`运行。
 - 对cell可进行拖拽操作，可实现多窗口排列效果，右键可清除输出等操作。
 
 
@@ -47,11 +47,13 @@ pip install jupyterlab
 
 目前 Jupyter lab 已有许多插件支持，并再逐步丰富。[awesome-jupyterlab](https://github.com/mauhai/awesome-jupyterlab) 总结了常用的一些，每个插件项目都有详细的安装配置教程。
 
+插件的安装需要 nodejs，可以使用 `conda install nodejs`安装，或直接[官网下载](http://nodejs.cn/download/)安装包。
+
 其实在最新版本中，jupyter lab 自带了一个插件管理器，默认是关闭状态，开启后只需在管理中便可方便的安装、升级、删除插件。
 
 开启方法为：在侧边栏打开 `commands` (调色盘标志)，搜索框中输入`extension manager`，将它勾选，然后侧边栏最后将出现插件管理器。
 
-目前`extension manager`还处于试验阶段，如果插件安装失败，可按照插件安装说明的命令行模式安装。
+目前`extension manager`还处于试验阶段，如果插件安装失败，可按照插件安装说明的命令行模式安装。通常为 `jupyter labextension install 插件名`。
 
 下面介绍几个实用插件：
 
