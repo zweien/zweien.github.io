@@ -3,4 +3,6 @@ title: Why Blog
 layout: post
 ---
 
-# 记录
+# Blog
+- 技术分享
+- 论文笔记
