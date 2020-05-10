@@ -1,6 +1,6 @@
-# zweien.github.io
+# Personal blog using Jekyll
 
-Personal Blog
+
 
 - Paper notes
 - Technical Sharing
