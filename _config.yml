@@ -28,7 +28,7 @@ favicon: /assets/img/z.png
 
 
 # Build settings
-permalink: /:year/:month/:day/:title.html
+permalink: /:categories/:title.html
 markdown: kramdown
 highlighter: rouge
 mathjax: enabled
